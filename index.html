@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Folio: Every asset, every currency, one number</title>
+  <meta name="description" content="Folio shows your net worth across ASX and US-listed holdings in one base currency. Coming to iPhone.">
+  <meta name="theme-color" content="#F6F7FA">
+
+  <!-- Social share. TODO: add media/og-image.png (1200 × 630) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Folio: Every asset, every currency, one number">
+  <meta property="og:description" content="See your net worth across ASX and US holdings, converted into one currency. Coming to iPhone.">
+  <meta property="og:image" content="media/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- TODO: favicon uses the full app icon from Figma for now; simplified two-segment ring still to be designed and confirmed -->
+  <link rel="icon" href="media/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="/" class="logo" aria-label="Folio home">
+        <img src="media/folio-logo.svg" alt="folio" width="434" height="168">
+      </a>
+      <a href="#waitlist" class="btn btn--secondary btn--sm">Get started</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 1. Hero -->
+    <section class="hero" id="waitlist" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Coming to iPhone</p>
+          <h1 id="hero-title" class="hero__title">Every asset, every currency, one number.</h1>
+          <p class="hero__lede">See your net worth across ASX and US-listed holdings, converted into one base currency and updated every day.</p>
+
+          <form class="waitlist" data-source="hero" novalidate>
+            <label for="hero-email" class="visually-hidden">Email address</label>
+            <div class="waitlist__row">
+              <input id="hero-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required class="input">
+              <button type="submit" class="btn btn--primary">Get started</button>
+            </div>
+            <p class="waitlist__consent">Join the waitlist and we'll email you when Folio launches. Unsubscribe anytime. See our <a href="privacy.html">Privacy Policy</a>.</p>
+            <p class="waitlist__status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <figure class="phone hero__phone">
+          <img src="media/screen-worth.png" alt="Folio Worth screen showing a net worth of $47,832.15 AUD, up $312.40 (+0.66%) today, with a one-month chart and top movers" width="1179" height="2556">
+        </figure>
+      </div>
+    </section>
+
+    <!-- 2. Feature blocks -->
+    <section class="features" aria-label="Features">
+      <div class="container">
+
+        <article class="feature">
+          <div class="feature__copy">
+            <p class="feature__kicker">One number</p>
+            <h2 class="feature__title">Your whole net worth at a glance.</h2>
+            <p class="feature__body">Folio adds up every holding and shows one total in your base currency, with how it moved today and over time.</p>
+            <div class="stat">
+              <p class="stat__label">Net worth (AUD)</p>
+              <p class="stat__value">$47,832.15</p>
+              <p class="pill pill--gain"><span aria-hidden="true">↑</span> $312.40 (+0.66%) today</p>
+            </div>
+          </div>
+          <figure class="phone">
+            <img src="media/screen-edit-holdings.png" alt="Folio Edit Holdings screen listing ASX and US holdings, with values shown in AUD" width="1179" height="2556" loading="lazy">
+          </figure>
+        </article>
+
+        <article class="feature feature--reverse">
+          <div class="feature__copy">
+            <p class="feature__kicker">See where it sits</p>
+            <h2 class="feature__title">Understand how your money is split.</h2>
+            <p class="feature__body">View your allocation by region, sector, asset type or individual holding, so concentration is easy to spot.</p>
+            <div class="split" role="img" aria-label="Example region split: Australia 42%, Asia 33%, US 25%">
+              <div class="split__bar" aria-hidden="true">
+                <span class="split__seg split__seg--1" style="flex: 42"></span>
+                <span class="split__seg split__seg--2" style="flex: 33"></span>
+                <span class="split__seg split__seg--3" style="flex: 25"></span>
+              </div>
+              <ul class="split__legend" aria-hidden="true">
+                <li><span class="dot dot--1"></span>Australia <strong>42%</strong></li>
+                <li><span class="dot dot--2"></span>Asia <strong>33%</strong></li>
+                <li><span class="dot dot--3"></span>US <strong>25%</strong></li>
+              </ul>
+            </div>
+          </div>
+          <figure class="phone">
+            <img src="media/screen-allocation.png" alt="Folio Allocation screen with a region donut: Australia 42%, US 25%, Asia 33%" width="1179" height="2556" loading="lazy">
+          </figure>
+        </article>
+
+        <article class="feature">
+          <div class="feature__copy">
+            <p class="feature__kicker">Every currency, converted</p>
+            <h2 class="feature__title">ASX and US holdings, in one currency.</h2>
+            <p class="feature__body">Enter each holding in its own currency. Folio converts everything into AUD, or the base currency you choose, using daily exchange rates.</p>
+            <ul class="checklist">
+              <li>ASX-listed stocks and ETFs, including Betashares</li>
+              <li>US-listed stocks and ETFs</li>
+              <li>No bank or broker logins needed</li>
+            </ul>
+          </div>
+          <figure class="phone">
+            <img src="media/screen-base-currency.png" alt="Folio base currency screen with Australian Dollar selected" width="1179" height="2556" loading="lazy">
+          </figure>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 3. How it works -->
+    <section class="steps" aria-labelledby="steps-title">
+      <div class="container">
+        <h2 id="steps-title" class="section-title">How it works</h2>
+        <ol class="steps__list">
+          <li class="card step">
+            <span class="step__num" aria-hidden="true">1</span>
+            <h3 class="step__title">Add your holdings</h3>
+            <p class="step__body">Enter what you hold once: ticker, quantity and average cost.</p>
+          </li>
+          <li class="card step">
+            <span class="step__num" aria-hidden="true">2</span>
+            <h3 class="step__title">Watch your net worth update daily</h3>
+            <p class="step__body">Prices refresh after each market close and everything is converted into your base currency.</p>
+          </li>
+          <li class="card step">
+            <span class="step__num" aria-hidden="true">3</span>
+            <h3 class="step__title">Understand your allocation</h3>
+            <p class="step__body">See the split by region, sector and asset type in one view.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 4. Final call to action -->
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="container cta__inner">
+        <h2 id="cta-title" class="cta__title">One calm place for your net worth.</h2>
+        <p class="cta__lede">Folio is coming to iPhone first. Join the waitlist and we'll let you know when it's ready.</p>
+        <form class="waitlist waitlist--on-navy" data-source="cta" novalidate>
+          <label for="cta-email" class="visually-hidden">Email address</label>
+          <div class="waitlist__row">
+            <input id="cta-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required class="input">
+            <button type="submit" class="btn btn--on-navy">Get started</button>
+          </div>
+          <p class="waitlist__consent">We'll only email you about Folio. Unsubscribe anytime.</p>
+          <p class="waitlist__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- 5. Footer -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <img src="media/folio-logo.svg" alt="folio" width="434" height="168" class="site-footer__logo">
+      <p class="site-footer__disclaimer">Folio is a tracking tool and doesn't provide financial advice.</p>
+      <nav aria-label="Footer">
+        <ul class="site-footer__links">
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="https://www.linkedin.com/in/spencerwongg/" rel="noopener" target="_blank">Contact</a></li>
+        </ul>
+      </nav>
+      <p class="site-footer__copy">© 2026 Folio</p>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
